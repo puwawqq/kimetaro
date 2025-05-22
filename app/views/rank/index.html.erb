@@ -1,0 +1,14 @@
+<h2>嗜好抽出</h2>
+<%= link_to "選択肢", "/rank/new" %>
+ <h2>【結果を見る】</h2>
+ <% @rank.each do |ranks| %>
+  <p>和食: <%= ranks.washoku %></p>
+  <p>洋食: <%= ranks.youshoku %></p>
+  <p>イタリアン: <%= ranks.italian %></p>
+  <p>焼肉: <%= ranks.yakiniku %></p>
+  <p>:フレンチ <%= ranks.french %></p>
+  <p>:鍋料理 <%= ranks.nabe %></p>
+  <p>:地中海料理 <%= ranks.medit %></p>
+  <p>:ファストフード <%= ranks.fast %></p>
+  <p>:スイーツ <%= ranks.sweet %></p>
+<% end %>

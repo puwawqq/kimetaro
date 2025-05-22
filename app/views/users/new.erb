@@ -1,0 +1,15 @@
+<div class="wrapper">
+ <div class="controller">
+  <h2>ユーザ登録</h2>
+
+  <%= form_with model: @user_new url: users_path, local: true, method: :post do |f| %>
+   <%= f.label :name, "Name" %>
+   <%= f.<%= text_field:name, Class: "form-box" %>
+
+   <%= f.label :password, "Password" %>
+   <%= f.<%= password_field:password, Class: "form-box" %>
+
+   <%= f.submit:"ログイン", class: "btn" %>
+  <% end%>
+ </div>
+</div>
